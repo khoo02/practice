@@ -2,6 +2,9 @@
 using namespace std;
 
 int main() {
+    // welcome propmt
+    cout << "\nWelcome to The Calculator!\n\n";
+
     // oeprator and number variables
     char op = ' ';
     double num1 = 0, num2 = 0, result = 0;
@@ -36,7 +39,7 @@ int main() {
 
     cout << "Result: " << result << endl;
     
-    cout << "**********************************" << endl;
+    cout << "**********************************" << endl << endl;
 
     return 0;
 }

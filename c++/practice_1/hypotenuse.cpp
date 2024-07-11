@@ -4,6 +4,9 @@
 using namespace std;
 
 int main() {
+    // welcome prompt
+    cout << "Welcome to The Hypotenuse Calculator!\n";
+    
     // calculate hypotenuse
     double a, b, c;
 
