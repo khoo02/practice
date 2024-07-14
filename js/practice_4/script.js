@@ -12,3 +12,7 @@ function capitalize(string) {
         return string[0].toLowerCase() + string.slice(1);
     }
 }
+// specifically last letter only
+function lastLetter(string) { 
+        return string[string.length-1];
+}
