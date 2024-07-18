@@ -6,7 +6,7 @@ void printResult(int num)
     // iterate from 1 to num
     for (int i = 1; i <= num; i++)
     {
-        // print 'FizzBuzz' if num divisible by both 3 and 5F
+        // print 'FizzBuzz' if num divisible by both 3 and 5
         if (i % 3 == 0 && i % 5 == 0)
         {
             printf("FizzBuzz\n");
