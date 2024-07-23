@@ -24,6 +24,6 @@ int main() {
     c = sqrt(a + b);
 
     // result 
-    cout << "side C: " << c <<endl; 
+    cout << "side C: " << c << endl; 
     return 0;
 }
