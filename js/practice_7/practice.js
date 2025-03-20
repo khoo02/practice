@@ -35,3 +35,13 @@ const contentDiv = document.createElement("div");
         contentDiv.appendChild(divP);
 
     container.appendChild(contentDiv);
+
+const btn = document.querySelector("#btn");
+
+function helloWorld() {
+    alert('Hello World');
+}
+
+btn.addEventListener("click", function (e) {
+    e.target.style.background = "white";
+});
