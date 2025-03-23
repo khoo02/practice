@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping list example</title>
+    <style>
+      li {
+        margin-bottom: 10px;
+      }
+
+      li button {
+        font-size: 12px;
+        margin-left: 20px;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+
+    <h1>My shopping list</h1>
+
+    <div>
+      <label for="item">Enter a new item:</label>
+      <input type="text" name="item" id="item">
+      <button>Add item</button>
+    </div>
+
+    <ul>
+
+    </ul>
+
+    <script>
+
+        // 1) create three variables for: <ul>, <input>, <button>
+        const unorderedListVar = document.querySelector("ul");
+        const inputVar = document.querySelector("input");
+        const btnVar = document.querySelector("button");
+
+        // 2) create a function that responds to button click
+        btnVar.addEventListener("click", () => {
+
+            // 3) store current input value in variable
+            let inputText = inputVar.value;
+            
+            // 4) clear input value
+            inputVar.value = '';
+            
+            // 5) create three elements: <li>, <span>, <button> and store in variables
+            const orderedListElem = document.createElement("li");
+            const spanElem = document.createElement("span");
+            const btnElem = document.createElement("button");
+            
+            // 6) append spand and button as children of list item
+            orderedListElem.appendChild(spanElem);
+            orderedListElem.appendChild(btnElem);
+            
+            // 7) set text of span to input text, and button text to 'Delete'
+            spanElem.textContent = inputText;
+            btnElem.textContent = "Delete";
+            
+            // 8) append list item as a child of the list
+            unorderedListVar.appendChild(orderedListElem);
+
+            // 9) attach event handler to delete button
+            btnElem.addEventListener("click", () => {
+                unorderedListVar.removeChild(orderedListElem);
+            })
+
+            // 10) focus input element for next shopping list item
+            inputVar.focus();
+            
+        })
+
+    </script>
+  </body>
+</html>
