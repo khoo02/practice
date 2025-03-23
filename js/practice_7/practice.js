@@ -45,3 +45,11 @@ function helloWorld() {
 btn.addEventListener("click", function (e) {
     e.target.style.background = "white";
 });
+
+const buttons = document.querySelectorAll("button");
+
+buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+        alert(button.id);
+    })
+})
